@@ -53,23 +53,23 @@ resource "aws_ecs_task_definition" "app" {
       ]
 
       environment = [
-        {
-          name  = "DB_HOST"
-          value = aws_rds_cluster.aurora.endpoint
-        },
-        {
-          name  = "DB_USER"
-          value = "adminuser"
-        },
-        {
-          name  = "DB_PASSWORD"
-          value = "Password123!"
-        },
-        {
-          name  = "DB_NAME"
-          value = "mydb"
-        }
-      ]
+  {
+    name  = "DB_HOST"
+    value = aws_rds_cluster.aurora.endpoint
+  },
+  {
+    name  = "DB_USER"
+    value = "adminuser"
+  },
+  {
+    name  = "DB_PASSWORD"
+    value = "Password123!"
+  },
+  {
+    name  = "DB_NAME"
+    value = "postgres"
+  }
+]
 
       logConfiguration = {
         logDriver = "awslogs"
