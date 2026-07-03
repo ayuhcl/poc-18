@@ -55,7 +55,7 @@ resource "aws_ecs_task_definition" "app" {
       environment = [
   {
     name  = "DB_HOST"
-    value = aws_rds_cluster.aurora.endpoint
+    value = aws_db_instance.postgres.address
   },
   {
     name  = "DB_USER"
