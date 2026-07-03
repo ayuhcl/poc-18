@@ -10,8 +10,7 @@ resource "aws_db_subnet_group" "aurora_subnet_group" {
 resource "aws_rds_cluster" "aurora" {
   cluster_identifier = "poc18-aurora"
 
-  engine         = "aurora-mysql"
-  engine_version = "8.0.mysql_aurora.3.05.2"
+  engine = "aurora-postgresql"
 
   master_username = "adminuser"
   master_password = "Password123!"
