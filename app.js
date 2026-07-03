@@ -10,6 +10,10 @@ const client = new Client({
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME,
     port: 5432
+    ssl: {
+        rejectUnauthorized: false
+    }
+
 });
 
 client.connect()
