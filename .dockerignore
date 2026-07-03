@@ -1,0 +1,9 @@
+terraform/
+.git/
+node_modules/
+*.png
+*.jpg
+*.jpeg
+*.pdf
+*.zip
+*.log
